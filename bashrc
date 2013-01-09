@@ -50,7 +50,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-		PS1='\[\033[1;32m\][\t] \[\033[0;32m\] \H \[\033[0;36m\]\w \n\$ \[\033[0m\] ' 
+    PS1='\[\033[1;32m\][\t] \[\033[0;32m\] \u \[\033[0;36m\]\w \n\$ \[\033[0m\] '
 else
     PS1=${debian_chroot:+($debian_chroot)}\u@\h:\w\$
 fi
@@ -78,8 +78,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -l'
+alias la='ls -la'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -106,3 +106,13 @@ fi
 function gvim () { (/usr/bin/gvim -f "$@" &) }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+. ~/nvm/nvm.sh
+
+# Aliasy
+
+alias cdr='cd ~/workspace/ruby/rails/'
+alias cdn='cd ~/workspace/js/node.js/'
+alias cpses='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
+

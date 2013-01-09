@@ -64,6 +64,10 @@ set history=500
 set nobackup
 set nowb
 set noswapfile
+set nowrap
+
+" mapping leader key - coś nie śmiga :D
+" let mapleader = “,”
 
 
 " |-----------------------------------------------------|
@@ -71,9 +75,11 @@ set noswapfile
 " |-----------------------------------------------------|
 "  
 
+"czcionka
+set guifont=Monospace\ 9
 
 " color theme
-color codeschool
+color Monokai
 
 " use dark background
 set background=dark
@@ -139,15 +145,34 @@ endif
 
 
 " |-----------------------------------------------------|
+" |                     Shortcuts                       |
+" |-----------------------------------------------------|
+"
+
+" Toggle the file browser
+map <F2> <Esc>:NERDTreeToggle<CR>
+
+" FuzzyFinder Buffer map
+map <F3> <Esc>:FufBuffer<CR>
+
+
+" |-----------------------------------------------------|
 " |                     Plugins                         |
 " |-----------------------------------------------------|
 "
 
 
-"  + NERDTree
-"  + rails.vim
-"  + FuzzyFinder
-"    + l9 library
-"  + Syntastic
-"  + Vim Ruby
-"  + Vim haml 
+"  + NERDTree     - drzewo folderów
+"  + rails.vim    - railsy
+"  + FuzzyFinder  - wyszukiwarka plików
+"    + l9 library - biblioteka używana przez FuzzyFinder
+"  + Syntastic    - plugin sprawdzający poprawność składni
+"  + Vim Ruby     - ruby
+"  + Vim haml     - haml
+"  + ragtag       - zamykanie tagów
+"  + jade         - składnia dla Node dla HTML, jak haml dla railsów
+"  + stylus       - składnia dla CSS, jak jade dla HTML'a
+"  + Sorround     - otaczanie słów nawiasami, tagami, cudzysłowami itp.
+"  + AutoClose    - autozamykanie nawiasów, cudzysłowów itp
+
+
