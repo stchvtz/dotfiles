@@ -114,5 +114,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 alias cdr='cd ~/workspace/ruby/rails/'
 alias cdn='cd ~/workspace/js/node.js/'
-alias cpses='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
-
+alias cpsesfd='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
+alias cpsesdf='sudo cp ~/Dokumenty/sessionstore.js ~/.mozilla/firefox/gknk3nru.default/'
