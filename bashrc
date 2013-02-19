@@ -102,6 +102,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# export PATH=$HOME/bin:$PATH
+
 # global menu bar for GVim
 function gvim () { (/usr/bin/gvim -f "$@" &) }
 
@@ -112,7 +114,20 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Aliasy
 
-alias cdr='cd ~/workspace/ruby/rails/'
-alias cdn='cd ~/workspace/js/node.js/'
+alias cdr='cd ~/workspace/ruby/rails/ && ls -l'
+alias cdn='cd ~/workspace/js/node.js/ && ls -l'
 alias cpsesfd='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
 alias cpsesdf='sudo cp ~/Dokumenty/sessionstore.js ~/.mozilla/firefox/gknk3nru.default/'
+alias bers="bundle exec rails s"
+# aliases for git
+alias gi='git init'
+alias ga='git add'
+alias grh='git reset --hard HEAD^'
+alias gb='git branch'
+alias gm='git merge'
+alias gcam='git commit -a -m'
+alias gco='git checkout'
+alias gp='git push'
+alias gl='git pull'
+alias gst='git status'
+alias glg='git log --pretty=oneline --abbrev-commit'

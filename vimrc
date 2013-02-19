@@ -17,6 +17,43 @@ runtime! debian.vim
 " gvim more like vim, not vi ;)
 set nocompatible
 
+
+"|
+"|                      Vundle
+"|
+"
+"
+filetype off
+
+" set rtp+=~/usr/share/vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'L9'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'tpope/vim-rails.git'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-ragtag'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/AutoClose'
+Bundle 'sickill/vim-monokai'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Lokaltog/vim-powerline'
+
+
+
+
+
+" Wykrywanie typu pliku i wlaczenie domyslnych ustawien jak długosc linii, wciecia
+" Rowniez ladownie plikow wciec aby robic automatyczne wciecia zaleznie od jezyka programowania
+filetype plugin indent on
+
 " kodowanie UTF-8
 set encoding=utf-8
 
@@ -28,9 +65,6 @@ if has("syntax")
   syntax on
 endif
 
-" Wykrywanie typu pliku i wlaczenie domyslnych ustawien jak długosc linii, wciecia
-" Rowniez ladownie plikow wciec aby robic automatyczne wciecia zaleznie od jezyka programowania
-filetype plugin indent on
 
 " Enable filetype plugins
 filetype plugin on
@@ -154,25 +188,4 @@ map <F2> <Esc>:NERDTreeToggle<CR>
 
 " FuzzyFinder Buffer map
 map <F3> <Esc>:FufBuffer<CR>
-
-
-" |-----------------------------------------------------|
-" |                     Plugins                         |
-" |-----------------------------------------------------|
-"
-
-
-"  + NERDTree     - drzewo folderów
-"  + rails.vim    - railsy
-"  + FuzzyFinder  - wyszukiwarka plików
-"    + l9 library - biblioteka używana przez FuzzyFinder
-"  + Syntastic    - plugin sprawdzający poprawność składni
-"  + Vim Ruby     - ruby
-"  + Vim haml     - haml
-"  + ragtag       - zamykanie tagów
-"  + jade         - składnia dla Node dla HTML, jak haml dla railsów
-"  + stylus       - składnia dla CSS, jak jade dla HTML'a
-"  + Sorround     - otaczanie słów nawiasami, tagami, cudzysłowami itp.
-"  + AutoClose    - autozamykanie nawiasów, cudzysłowów itp
-
 
