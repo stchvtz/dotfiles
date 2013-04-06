@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -39,20 +39,20 @@ esac
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+# We have color support; assume it's compliant with Ecma-48
+# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+# a case would tend to support setf rather than setaf.)
+color_prompt=yes
     else
-	color_prompt=
+color_prompt=
     fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[1;32m\][\t] \[\033[0;32m\] \u \[\033[0;36m\]\w \n\$ \[\033[0m\] '
+PS1='\[\033[1;32m\][\t] \[\033[0;32m\] \u \[\033[0;36m\]\w \n\$ \[\033[0m\] '
 else
-    PS1=${debian_chroot:+($debian_chroot)}\u@\h:\w\$
+PS1=${debian_chroot:+($debian_chroot)}\u@\h:\w\$
 fi
 unset color_prompt force_color_prompt
 
@@ -67,7 +67,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -82,8 +82,8 @@ alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+# Add an "alert" alias for long running commands. Use like so:
+# sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
@@ -102,6 +102,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# export PATH=$HOME/bin:$PATH
+
 # global menu bar for GVim
 function gvim () { (/usr/bin/gvim -f "$@" &) }
 
@@ -112,7 +114,22 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Aliasy
 
-alias cdr='cd ~/workspace/ruby/rails/'
-alias cdn='cd ~/workspace/js/node.js/'
+alias cdr='cd ~/workspace/ruby/rails/ && ls -l'
+alias cdn='cd ~/workspace/js/node.js/ && ls -l'
 alias cpsesfd='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
 alias cpsesdf='sudo cp ~/Dokumenty/sessionstore.js ~/.mozilla/firefox/gknk3nru.default/'
+alias bers="bundle exec rails s"
+alias skyp='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype'
+
+# aliases for git
+alias gi='git init'
+alias ga='git add'
+alias grh='git reset --hard HEAD^'
+alias gb='git branch'
+alias gm='git merge'
+alias gcam='git commit -a -m'
+alias gco='git checkout'
+alias gp='git push'
+alias gl='git pull'
+alias gst='git status'
+alias glg='git log --pretty=oneline --abbrev-commit'
