@@ -42,6 +42,12 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/AutoClose'
+<<<<<<< HEAD
+=======
+Bundle 'sickill/vim-monokai'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Lokaltog/vim-powerline'
+>>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145
 
 
 
@@ -185,3 +191,7 @@ map <F2> <Esc>:NERDTreeToggle<CR>
 
 " FuzzyFinder Buffer map
 map <F3> <Esc>:FufBuffer<CR>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145

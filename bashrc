@@ -119,8 +119,11 @@ alias cdn='cd ~/workspace/js/node.js/ && ls -l'
 alias cpsesfd='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
 alias cpsesdf='sudo cp ~/Dokumenty/sessionstore.js ~/.mozilla/firefox/gknk3nru.default/'
 alias bers="bundle exec rails s"
+<<<<<<< HEAD
 alias skyp='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype'
 
+=======
+>>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145
 # aliases for git
 alias gi='git init'
 alias ga='git add'
