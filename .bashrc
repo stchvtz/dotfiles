@@ -104,27 +104,29 @@ fi
 
 # export PATH=$HOME/bin:$PATH
 
+
 # global menu bar for GVim
 function gvim () { (/usr/bin/gvim -f "$@" &) }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-. ~/nvm/nvm.sh
 
 # Aliasy
 
 alias cdr='cd ~/workspace/ruby/rails/ && ls -l'
 alias cdn='cd ~/workspace/js/node.js/ && ls -l'
-alias cpsesfd='sudo cp ~/.mozilla/firefox/gknk3nru.default/sessionstore.js ~/Dokumenty'
-alias cpsesdf='sudo cp ~/Dokumenty/sessionstore.js ~/.mozilla/firefox/gknk3nru.default/'
 alias bers="bundle exec rails s"
-<<<<<<< HEAD
 alias skyp='LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype'
+alias tmux='tmux -2'
+alias t='tmux new-session -s'
+alias ta='tmux attach -t'
+alias tl='tmux ls'
+alias tk='tmux kill-session -t'
 
-=======
->>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145
+
 # aliases for git
+
 alias gi='git init'
 alias ga='git add'
 alias grh='git reset --hard HEAD^'
@@ -136,3 +138,6 @@ alias gp='git push'
 alias gl='git pull'
 alias gst='git status'
 alias glg='git log --pretty=oneline --abbrev-commit'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

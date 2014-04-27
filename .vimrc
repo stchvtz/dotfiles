@@ -42,16 +42,13 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/AutoClose'
-<<<<<<< HEAD
-=======
-Bundle 'sickill/vim-monokai'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'Lokaltog/vim-powerline'
->>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145
-
-
-
-
+Bundle 'maciakl/vim-neatstatus'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'kien/ctrlp.vim'
+Bundle 'justinmk/vim-gtfo'
+Bundle 'mattn/gist-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'terryma/vim-multiple-cursors'
 
 " Wykrywanie typu pliku i wlaczenie domyslnych ustawien jak długosc linii, wciecia
 " Rowniez ladownie plikow wciec aby robic automatyczne wciecia zaleznie od jezyka programowania
@@ -104,7 +101,10 @@ set noswapfile
 set nowrap
 
 " mapping leader key - coś nie śmiga :D
-" let mapleader = “,”
+""let mapleader = “,”
+
+
+set backspace=2
 
 
 " |-----------------------------------------------------|
@@ -115,8 +115,10 @@ set nowrap
 "czcionka
 set guifont=Monospace\ 9
 
+set t_Co=256
+
 " color theme
-color Monokai
+colorscheme lucius
 
 " use dark background
 set background=dark
@@ -148,7 +150,7 @@ set number
 
 " podświetlanie obecnej lini
 set cul                                          
-hi CursorLine term=none cterm=none ctermbg=3 
+hi CursorLine term=none cterm=none ctermbg=8
 
 " NERDTree at right side
 " let g:NERDTreeWinPos = "right"
@@ -191,7 +193,6 @@ map <F2> <Esc>:NERDTreeToggle<CR>
 
 " FuzzyFinder Buffer map
 map <F3> <Esc>:FufBuffer<CR>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4bf2035edaa063ae2c710a14c56a55499b1c1145
+" ctrlP finding file
+map <F4> <Esc>:CtrlPMixed<CR>
