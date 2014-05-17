@@ -42,13 +42,30 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/AutoClose'
+"" status bar
 Bundle 'maciakl/vim-neatstatus'
+"" lots of colorschemes
 Bundle 'flazz/vim-colorschemes'
+"" i use that for finding files mapped at F4
 Bundle 'kien/ctrlp.vim'
+"" open current file inside terminal or file manager
 Bundle 'justinmk/vim-gtfo'
+"" send file or chunk of code to gist
 Bundle 'mattn/gist-vim'
+"" for git
 Bundle 'tpope/vim-fugitive'
+"" multiple coursor :D
 Bundle 'terryma/vim-multiple-cursors'
+"" only for tests, display color table
+Bundle 'xterm-color-table.vim'
+"" shows git diff in gutter
+Bundle 'airblade/vim-gitgutter'
+"" makes work with node little more comfortable
+Bundle 'moll/vim-node'
+"" node completitor
+Bundle 'myhere/vim-nodejs-complete'
+"" c-tags
+Bundle 'vim-scripts/taglist.vim'
 
 " Wykrywanie typu pliku i wlaczenie domyslnych ustawien jak długosc linii, wciecia
 " Rowniez ladownie plikow wciec aby robic automatyczne wciecia zaleznie od jezyka programowania
@@ -106,6 +123,9 @@ set nowrap
 
 set backspace=2
 
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F5> :TlistToggle<cr>
 
 " |-----------------------------------------------------|
 " |                       Look                          |
@@ -116,12 +136,13 @@ set backspace=2
 set guifont=Monospace\ 9
 
 set t_Co=256
+"
+" use dark background
+set background=dark
 
 " color theme
 colorscheme lucius
 
-" use dark background
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
