@@ -26,46 +26,57 @@ set nocompatible
 filetype off
 
 " set rtp+=~/usr/share/vim/bundle/vundle/
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'L9'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'tpope/vim-rails.git'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-ragtag'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'wavded/vim-stylus'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/AutoClose'
+Plugin 'gmarik/vundle'
+Plugin 'L9'
+"" Project tree at side menu
+Plugin 'scrooloose/nerdtree'
+"" Syntax checker
+Plugin 'scrooloose/syntastic'
+"" plugin for ruby
+Plugin 'vim-ruby/vim-ruby'
+"" haml syntax 
+Plugin 'tpope/vim-haml'
+"" shorthands for tags
+Plugin 'tpope/vim-ragtag'
+"" jade syntax
+Plugin 'digitaltoad/vim-jade'
+"" quotations marks
+Plugin 'tpope/vim-surround'
+"" autoclose {[()]} itp.
+Plugin 'vim-scripts/AutoClose'
 "" status bar
-Bundle 'maciakl/vim-neatstatus'
+Plugin 'itchyny/lightline.vim'
 "" lots of colorschemes
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 "" i use that for finding files mapped at F4
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 "" open current file inside terminal or file manager
-Bundle 'justinmk/vim-gtfo'
+Plugin 'justinmk/vim-gtfo'
 "" send file or chunk of code to gist
-Bundle 'mattn/gist-vim'
+Plugin 'mattn/gist-vim'
 "" for git
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 "" multiple coursor :D
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 "" only for tests, display color table
-Bundle 'xterm-color-table.vim'
+Plugin 'xterm-color-table.vim'
 "" shows git diff in gutter
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 "" makes work with node little more comfortable
-Bundle 'moll/vim-node'
+Plugin 'moll/vim-node'
 "" node completitor
-Bundle 'myhere/vim-nodejs-complete'
+Plugin 'myhere/vim-nodejs-complete'
 "" c-tags
-Bundle 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
+"" support for editing JS
+Plugin 'marijnh/tern_for_vim'
+"" go support for vim
+Plugin 'fatih/vim-go'
+
+call vundle#end()
 
 " Wykrywanie typu pliku i wlaczenie domyslnych ustawien jak długosc linii, wciecia
 " Rowniez ladownie plikow wciec aby robic automatyczne wciecia zaleznie od jezyka programowania
@@ -142,6 +153,14 @@ set background=dark
 
 " color theme
 colorscheme lucius
+
+"" status bar settings
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+set laststatus=2
 
 
 " Set extra options when running in GUI mode
